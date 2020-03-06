@@ -1,7 +1,7 @@
 @import "~@fremtind/jkl-core/variables/_all.scss";
 
 .jkl-portal-footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -14,5 +14,16 @@
     &__logo {
         width: 100%;
         max-width: 200px;
+    }
+
+    &__links > * {
+        margin: 0 $component-spacing--small;
+    }
+}
+
+[data-theme="dark"] {
+    .jkl-portal-footer {
+        color: $gra-10;
+        background: linear-gradient(0deg, $svart 0%, $gra-100 100%);
     }
 }

@@ -3,9 +3,8 @@
 
 .jkl-portal {
     position: relative;
-    padding-bottom: $layout-spacing--large;
-    margin-bottom: 260px;
     z-index: 1;
+    padding-bottom: $layout-spacing--large;
     background-color: $hvit;
     @include motion("standard");
     transition-property: color;

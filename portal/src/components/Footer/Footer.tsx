@@ -19,8 +19,7 @@ export function Footer({ className }: Props) {
     return (
         <footer className={componentClassName}>
             <span></span>
-
-            <div>
+            <div className="jkl-portal-footer__links">
                 <Link>Personvern</Link>
                 <Link>Om oss</Link>
             </div>
