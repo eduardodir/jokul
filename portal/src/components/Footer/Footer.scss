@@ -1,20 +1,18 @@
 @import "~@fremtind/jkl-core/variables/_all.scss";
 
 .jkl-portal-footer {
-    display: flex;
-    border-top: solid rem(1px) $gra-30;
-    padding-top: $layout-spacing--medium;
-    margin: $layout-spacing--large $layout-spacing--medium;
-    margin-bottom: $layout-spacing--medium;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
-    &__column {
-        @include jkl-text-style("compact/small");
-        color: $gra-70;
-        flex: 1 1 0px;
-        padding-right: $layout-spacing--large;
+    background: linear-gradient(0deg, $hvit 0%, $varde-10 100%);
+    display: grid;
+    place-items: center;
+    height: 260px;
 
-        &:last-of-type {
-            padding-right: 0;
-        }
+    &__logo {
+        width: 100%;
+        max-width: 200px;
     }
 }

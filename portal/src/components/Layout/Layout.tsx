@@ -31,18 +31,20 @@ export const Layout = ({ children, title, isFrontpage, location }: Props) => {
         wrapperRef.current?.setAttribute("data-theme", theme || "");
     }, [theme, wrapperRef]);
     return (
-        <div className="jkl-portal" data-theme={theme} ref={wrapperRef}>
-            <Helmet>
-                <html lang="no-nb" />
-                <title>{PageTitle}</title>
-            </Helmet>
-            <ThemeBG />
-            <Header />
-            <Sidebar location={location} />
-            <main className={mainClassName}>
-                <FormatProvider>{children}</FormatProvider>
-            </main>
+        <>
+            <div className="jkl-portal" data-theme={theme} ref={wrapperRef}>
+                <Helmet>
+                    <html lang="no-nb" />
+                    <title>{PageTitle}</title>
+                </Helmet>
+                <ThemeBG />
+                <Header />
+                <Sidebar location={location} />
+                <main className={mainClassName}>
+                    <FormatProvider>{children}</FormatProvider>
+                </main>
+            </div>
             <Footer className="jkl-portal__footer" />
-        </div>
+        </>
     );
 };
