@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+// @ts-ignore
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 interface SidebarMenuItemProps {
     idx: number;
@@ -15,7 +16,7 @@ export function SidebarMenuItem({ idx, path, currentPath, title }: SidebarMenuIt
             }}
             className="jkl-portal-sidebar-menu-item"
         >
-            <Link
+            <AniLink
                 activeClassName="jkl-portal-sidebar-menu-item__link--active"
                 className="jkl-portal-sidebar-menu-item__link"
                 style={{
@@ -23,9 +24,11 @@ export function SidebarMenuItem({ idx, path, currentPath, title }: SidebarMenuIt
                 }}
                 to={path}
                 state={{ lastPath: currentPath }}
+                swipe
+                direction="right"
             >
                 {title}
-            </Link>
+            </AniLink>
         </li>
     );
 }

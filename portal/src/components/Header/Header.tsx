@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
-import { Link } from "gatsby";
+// @ts-ignore
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import classNames from "classnames";
 
 import { useNavigationLinks, DocumentationPageInfo } from "./useNavigationLinks";
@@ -26,9 +27,9 @@ export const Header = () => {
 
     return (
         <header className={componentClassName}>
-            <Link to="/" className="jkl-portal-header__title">
+            <AniLink to="/" className="jkl-portal-header__title" swipe>
                 Jøkul
-            </Link>
+            </AniLink>
             <nav className="jkl-portal-header__navigation">
                 <ul className="jkl-portal-header__navigation-list">
                     <li className="jkl-portal-header__navigation-item">

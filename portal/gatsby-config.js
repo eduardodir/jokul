@@ -9,6 +9,12 @@ module.exports = {
     plugins: [
         "gatsby-plugin-typescript",
         {
+            resolve: "gatsby-plugin-transition-link",
+            options: {
+                layout: require.resolve(`./src/components/Layout/ComponentLayout.tsx`),
+            },
+        },
+        {
             resolve: "gatsby-plugin-sass",
             options: { implementation: require("sass") },
         },
@@ -30,11 +36,6 @@ module.exports = {
         },
         {
             resolve: `gatsby-plugin-mdx`,
-            options: {
-                defaultLayouts: {
-                    default: require.resolve("./src/components/Layout/ComponentLayout.tsx"),
-                },
-            },
         },
     ],
 };

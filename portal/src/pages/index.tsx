@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import { Layout } from "../components";
 import { DelayText } from "../components/Delaytext";
 
 import "@fremtind/jkl-core/core.min.css";
@@ -13,18 +12,12 @@ import { withPrefix } from "gatsby";
 // TODO Try to use scrollY in stead of time when lerping diamonds
 // TODO Remove DelayText when it's done
 
-interface Props {
-    location: Location;
-}
-
-const IndexPage = ({ location }: Props) => {
+const IndexPage = () => {
     const [principleState, setPrincipleState] = useState(0);
 
     const onPrincipleStateChange = (state: number) => {
         setPrincipleState(state);
     };
-
-    const ref = React.useRef(null);
 
     const onLeave = (state: number) => {
         if (state === principleState) {
@@ -55,8 +48,8 @@ const IndexPage = ({ location }: Props) => {
     }, [principleState]);
 
     return (
-        <Layout location={location} isFrontpage>
-            <DelayText ref={ref} text="Jøkul Designsystem" delay={100}>
+        <>
+            <DelayText text="Jøkul Designsystem" delay={100}>
                 <div className="jkl-portal-frontpage">
                     <section className="jkl-portal-frontpage__section-intro">
                         <h2 className="jkl-title-small">
@@ -171,7 +164,7 @@ const IndexPage = ({ location }: Props) => {
                     </section>
                 </div>
             </DelayText>
-        </Layout>
+        </>
     );
 };
 

@@ -7,7 +7,7 @@ interface Props {
     location: Location;
     children: ReactNode;
     pageContext: {
-        frontmatter: {
+        frontmatter?: {
             title: string;
             react?: string;
             scss?: string;
@@ -15,17 +15,16 @@ interface Props {
     };
 }
 
-export const ComponentLayout = ({
-    location,
-    children,
-    pageContext: {
-        frontmatter: { title, react, scss },
-    },
-}: Props) => {
+export const ComponentLayout = ({ location, children, pageContext }: Props) => {
     return (
-        <Layout location={location} title={title} isComponentPage>
-            <h1 className="jkl-title-large">{title}</h1>
-            <GitHubLinks react={react} scss={scss} />
+        <Layout
+            location={location}
+            title={pageContext?.frontmatter?.title}
+            isComponentPage={!!(pageContext?.frontmatter?.react || pageContext?.frontmatter?.scss)}
+            isFrontpage={location.pathname === "/"}
+        >
+            {pageContext?.frontmatter?.title && <h1 className="jkl-title-large">{pageContext.frontmatter.title}</h1>}
+            <GitHubLinks react={pageContext?.frontmatter?.react} scss={pageContext?.frontmatter?.scss} />
             {children}
         </Layout>
     );

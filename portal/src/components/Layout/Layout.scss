@@ -2,6 +2,7 @@
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 
 .jkl-portal {
+    overflow-x: hidden;
     @include motion("standard");
     transition-property: color;
     transition-delay: 150ms;
@@ -34,6 +35,9 @@
 
         &--frontpage {
             grid-column: sidebar / span 2;
+        }
+        .tl-edges {
+            overflow: hidden;
         }
     }
 
