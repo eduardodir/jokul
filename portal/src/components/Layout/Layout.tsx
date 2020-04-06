@@ -37,7 +37,6 @@ export const Layout: React.FC<Props> = ({ children, title, location, isFrontpage
                 <title>{PageTitle}</title>
             </Helmet>
             <ThemeBG />
-            <Header className="jkl-portal__header" />
             <Sidebar />
             <main className={mainClassName}>
                 <FormatProvider>{children}</FormatProvider>
