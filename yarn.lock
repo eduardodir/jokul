@@ -7187,16 +7187,6 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-jest-adapter@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/cypress-jest-adapter/-/cypress-jest-adapter-0.1.1.tgz#d1aa9d84393b6a5007022d1d33b3cdd3ce9672af"
-  integrity sha512-5dSB03utqDTBG5pi1LaAvYQD5uSMtSwurSzodpM+3XS/RdrjR/644oPnFUxPRvX4FVBaIY8avRs/f/GmIAiu8w==
-  dependencies:
-    expect "^24.5.0"
-    jest-get-type "^24.3.0"
-    jest-jquery-matchers "^2.1.0"
-    jquery "^3.4.0"
-
 cypress-plugin-snapshots@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/cypress-plugin-snapshots/-/cypress-plugin-snapshots-1.3.0.tgz#ca3bb2bbd1356d4234ca9bddb19b206743f7549b"
@@ -8687,7 +8677,7 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-expect@^24.5.0, expect@^24.9.0:
+expect@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/expect/-/expect-24.9.0.tgz#b75165b4817074fa4a157794f46fe9f1ba15b6ca"
   integrity sha512-wvVAx8XIol3Z5m9zvZXiyZOQ+sRJqNTIm6sGjdWlaZIeupQGO3WbYI+15D/AmEwZywL6wtJkbAbJtzkOfBuR0Q==
@@ -12129,7 +12119,7 @@ jest-environment-node@^24.9.0:
     jest-mock "^24.9.0"
     jest-util "^24.9.0"
 
-jest-get-type@^24.3.0, jest-get-type@^24.8.0, jest-get-type@^24.9.0:
+jest-get-type@^24.8.0, jest-get-type@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.9.0.tgz#1684a0c8a50f2e4901b6644ae861f579eed2ef0e"
   integrity sha512-lUseMzAley4LhIcpSP9Jf+fTrQ4a1yHQwLNeeVa2cEmbCGeoZAtYPOIv8JaxLD/sUpKxetKGP+gsHl8f8TSj8Q==
@@ -12179,11 +12169,6 @@ jest-jasmine2@^24.9.0:
     jest-util "^24.9.0"
     pretty-format "^24.9.0"
     throat "^4.0.0"
-
-jest-jquery-matchers@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/jest-jquery-matchers/-/jest-jquery-matchers-2.1.0.tgz#b56d19c460f6e57b17e6ddcce6f905d28b0ec532"
-  integrity sha512-gbCptZOPFv4m7CJenRJcp7OTmQ432yakCDGup6gExrIwbNq8hBfxU+llXO2IXOpFuLmI0c8A+JdGMUNXe6LV9A==
 
 jest-leak-detector@^24.9.0:
   version "24.9.0"
@@ -12426,11 +12411,6 @@ jpeg-js@^0.3.4:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.7.tgz#471a89d06011640592d314158608690172b1028d"
   integrity sha512-9IXdWudL61npZjvLuVe/ktHiA41iE8qFyLB+4VDTblEsWBzeg8WQTlktdUK4CdncUqtUgUg0bbOmTE2bKBKaBQ==
-
-jquery@^3.4.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-base64@^2.1.8:
   version "2.5.1"

@@ -1,4 +1,4 @@
-import {} from "cypress";
+/// <reference types="cypress" />
 
 context("Accordion", () => {
     beforeEach(() => {
