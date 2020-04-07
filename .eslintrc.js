@@ -19,7 +19,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
         "plugin:jsx-a11y/recommended",
-        "plugin:cypress/recommended",
     ],
     parserOptions: { ecmaVersion: 2018, sourceType: "module" },
     rules: {
@@ -43,5 +42,6 @@ module.exports = {
                 "@typescript-eslint/no-empty-function": "off",
             },
         },
+        { files: ["**/*.spec.*"], extends: ["plugin:cypress/recommended"] },
     ],
 };
